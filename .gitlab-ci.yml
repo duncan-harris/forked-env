@@ -1,0 +1,18 @@
+variables:
+
+deploy:
+    stage: deploy
+    environment:
+        name: environment
+        auto_stop_in: 5 minutes
+        on_stop: stop_review_app
+    script:
+        - echo
+
+stop_review_app:
+    stage: deploy
+    script:
+        - echo
+    environment:
+        name: environment
+        action: stop
