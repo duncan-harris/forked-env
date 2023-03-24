@@ -14,3 +14,4 @@ stop_app:
     environment:
         name: review/environment
         action: stop
+    when: manual
