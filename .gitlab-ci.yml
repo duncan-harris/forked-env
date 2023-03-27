@@ -2,7 +2,7 @@ deploy:
     stage: deploy
     environment:
         name: review/environment
-        auto_stop_in: 5 minutes
+        auto_stop_in: 10 minutes
         on_stop: stop_app
     script:
         - echo "No commit" # No comment
@@ -10,7 +10,7 @@ deploy:
 stop_app:
     stage: deploy
     script:
-        - echo '/** No comment **/' # Comment
+        - echo '/** No comment **/' # Further no comment
     environment:
         name: review/environment
         action: stop
